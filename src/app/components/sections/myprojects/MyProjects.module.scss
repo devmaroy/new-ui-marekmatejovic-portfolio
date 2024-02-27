@@ -1,0 +1,86 @@
+/*------------------------------------*\
+  # MyProjects Styles
+\*------------------------------------*/
+
+@use "src/styles/abstracts" as *;
+
+.myprojects {
+  margin-top: 8rem;
+}
+
+.myprojects__container {
+  @include container;
+}
+
+.myprojects__grid {
+  margin-top: 4rem;
+}
+
+.myprojects__project {
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 4.8rem;
+  }
+}
+
+.myprojects__image {
+  position: relative;
+  margin-bottom: 2.4rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 69.6875vw;
+    background: $color-background-off;
+    border-radius: $border-radius-lg;
+  }
+
+  img {
+    margin-top: 1.6rem;
+    position: relative;
+    object-fit: cover;
+    width: 82.5vw;
+    height: 77.5vw;
+    border-radius: $border-radius-lg;
+    z-index: 2;
+  }
+}
+
+.myprojects__title {
+  @include font-size(2.6rem, $line-height-xs);
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  margin: 0 0 1.6rem 0;
+}
+
+.myprojects__description {
+  @include font-size(1.8rem, $line-height-md);
+  margin-bottom: 2.4rem;
+}
+
+.myprojects__description p {
+  margin: 0;
+  color: $color-text;
+
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.myprojects__link {
+  @include font-size(1.6rem, $line-height-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  font-weight: $font-weight-bold;
+  color: $color-white-off;
+}
