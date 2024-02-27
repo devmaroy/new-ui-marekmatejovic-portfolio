@@ -1,0 +1,23 @@
+/*------------------------------------*\
+  # Social Styles
+\*------------------------------------*/
+
+@use "src/styles/abstracts" as *;
+
+.social {
+  @include list-unstyled;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social__link {
+  color: $color-white-off;
+  font-size: 3.2rem;
+
+  transition: all $transition;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}

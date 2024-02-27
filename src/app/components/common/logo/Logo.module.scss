@@ -1,0 +1,19 @@
+/*------------------------------------*\
+  # Logo Styles
+\*------------------------------------*/
+
+@use "src/styles/abstracts" as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo__link {
+  @include font-size(1.8rem, 1.2);
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-primary;
+}

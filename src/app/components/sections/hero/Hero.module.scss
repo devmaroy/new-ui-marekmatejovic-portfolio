@@ -1,0 +1,54 @@
+/*------------------------------------*\
+  # Hero Styles
+\*------------------------------------*/
+
+@use "src/styles/abstracts" as *;
+
+.hero {
+  background-color: $color-background;
+  background-image: $gradient-background;
+  color: $color-text-off;
+  padding: 4rem 0 8rem 0;
+}
+
+.hero__container {
+  @include container;
+}
+
+.hero__heading {
+  margin: 0;
+  @include font-size(4.6rem, 1.2);
+  font-weight: $font-weight-bold;
+  color: $color-white-off;
+  margin-bottom: 3.2rem;
+
+  span {
+    display: block;
+  }
+}
+
+.hero__highlight {
+  color: $color-primary;
+}
+
+.hero__text {
+  @include font-size(2.2rem, 1.6);
+  margin-bottom: 4rem;
+}
+
+.hero__text p {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.hero__image {
+  margin-top: 8rem;
+
+  img {
+    height: 35.5rem;
+    border-radius: $border-radius-lg;
+  }
+}

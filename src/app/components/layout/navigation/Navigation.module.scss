@@ -1,0 +1,77 @@
+/*------------------------------------*\
+  # Navigation Styles
+\*------------------------------------*/
+
+@use "src/styles/abstracts" as *;
+
+.navigation__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color-background;
+
+  transition: all $transition;
+  transform: translateX(100%);
+
+  &--open {
+    transform: translateX(0);
+  }
+}
+
+.navigation__container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.navigation__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.4rem 0;
+}
+
+.navigation__toggle {
+  @include reset-styles;
+  @include font-size(1.6rem, 1.2);
+  font-weight: $font-weight-bold;
+  padding: 1.2rem 2rem;
+  color: darken($color-primary, 35%);
+  background: $color-primary;
+  border-radius: $border-radius-full;
+  cursor: pointer;
+
+  transition: all $transition;
+
+  &:hover,
+  &:focus {
+    background: darken($color-primary, 10%);
+  }
+
+  svg {
+    font-size: 1.2rem;
+  }
+}
+
+.navigation__list {
+  @include list-unstyled;
+}
+
+.navigation__item {
+  border-bottom: 1px solid $color-primary;
+  padding: 2.4rem 0;
+}
+
+.navigation__link {
+  @include font-size(2.4rem, 1.6);
+  font-weight: $font-weight-bold;
+  color: $color-white;
+  text-decoration: none;
+
+  transition: all $transition;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
