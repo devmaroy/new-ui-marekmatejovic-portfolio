@@ -1,0 +1,41 @@
+/*------------------------------------*\
+  # Globals - Reset and base styles 
+\*------------------------------------*/
+
+@use "src/styles/base/normalize";
+@use "src/styles/abstracts" as *;
+
+// Resetting the font size for easier rem calculations
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+// Universal box-sizing rule
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Body base styles
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-primary;
+  font-size: $font-size-md; // Sets default font size to 16px (1.6rem)
+  line-height: $line-height-md;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $color-background;
+  color: $color-text;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

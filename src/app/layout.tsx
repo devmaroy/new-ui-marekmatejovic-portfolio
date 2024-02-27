@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faLinkedinIn,
+  faGithub,
+  faDribbble,
+} from "@fortawesome/free-brands-svg-icons";
+import { faX, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import "@/styles/base/_globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+// Font Awesome
+config.autoAddCss = false;
+library.add(faLinkedinIn, faGithub, faDribbble, faEnvelope, faX, faBars);
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
